@@ -1,0 +1,15 @@
+.userReviewContainer{
+    background-image: url("../../../icons/wave-haikei\ \(1\).svg");
+    height:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center center;
+    height: 80vh;
+
+}
+@media screen and (max-width: 720px) {
+    .userReviewContainer{
+        height: 100% !important;
+    }
+}

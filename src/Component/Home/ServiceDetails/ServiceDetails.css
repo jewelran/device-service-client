@@ -1,0 +1,15 @@
+.serviceContainer{
+    border:5px solid gray;
+    transition: all .3s ease;
+    box-shadow: -1px 1px 8px 3px #6c757d;
+    border-radius: 10px;
+
+}
+
+
+.serviceContainer:hover{
+    border:5px solid #6c757d;
+    box-shadow: -1px 1px 11px 7px #6c757d;
+}
+
+

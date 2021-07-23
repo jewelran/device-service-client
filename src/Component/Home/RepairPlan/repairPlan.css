@@ -1,0 +1,11 @@
+.repairPlanContainer{
+    background-image: url("../../../icons/circle-scatter-haikei\ \(1\).svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+@media screen and (max-width: 720px) {
+    .planningCardContainer{
+        margin: 0 auto !important;
+    }
+}

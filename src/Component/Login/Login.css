@@ -1,0 +1,21 @@
+@media screen and (max-width: 720px) {
+  .loginImg {
+    width: 100% !important;
+  }
+  .loginFullContainer {
+    height: 100% !important;
+
+  }
+}
+.loginFullContainer {
+  background-image: url("../../icons/wave-haikei\ \(4\).svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  height: 90vh;
+  width: 100%;
+}
+.loginImg {
+  height: 80%;
+  width: 80%;
+}

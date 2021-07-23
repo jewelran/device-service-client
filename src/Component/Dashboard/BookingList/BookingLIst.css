@@ -1,0 +1,13 @@
+.bookingLIstContainer,.addServiceContainer{
+    height: 100vh;
+    background-image: url("../../../icons/wave-haikei\ \(1\).svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    padding-bottom:2rem ;
+}
+@media screen and (max-width: 720px) {
+    .bookingLIstContainer{
+        height: 100%;
+    }
+}

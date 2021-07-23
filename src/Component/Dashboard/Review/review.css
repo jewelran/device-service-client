@@ -1,0 +1,14 @@
+.reviewContainer{
+    height: 100%;
+    background-image: url("../../../icons/wave-haikei\ \(1\).svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+@media screen and (max-width: 720px) {
+    .inputContainer{
+        width: 100% !important;
+        margin: 0 auto!important;
+        margin-left:20px !important ;
+    }
+}

@@ -1,0 +1,7 @@
+.nav-item{
+    cursor: pointer;
+}
+.nav-item:hover{
+    background-color: orange;
+    transition: all ease .3s;
+}

@@ -1,0 +1,15 @@
+.totalItemContainer{
+    background-image: url("../../../icons/wave-haikei.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    height: 100vh;
+
+}
+@media screen and (max-width: 720px) {
+    .totalItemContainer{
+        height: 100% !important;
+        padding-bottom: 5rem;
+        margin-left:1.5px;
+    }
+}

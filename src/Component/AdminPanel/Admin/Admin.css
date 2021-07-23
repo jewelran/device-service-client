@@ -1,0 +1,13 @@
+.adminContainer{
+    height: 100vh;
+    background-image: url("../../../icons/wave-haikei\ \(1\).svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+@media screen and (max-width: 720px) {
+    .adminContainer{
+        height: 100%;
+        padding-bottom: 5rem;
+    }
+  }
