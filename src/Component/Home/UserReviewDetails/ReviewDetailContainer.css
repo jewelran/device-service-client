@@ -1,16 +1,16 @@
 @media screen and (max-width: 720px) {
-    .imgContainer{
-        display:none !important;
-    }
-    
-    .reviewCardContainer{
-        height: 90% !important;
-        margin-top: 10px !important;
-    }
-    .reviewCardContainerTop{
-        margin: 0 auto !important;
-    }
-}
-.reviewCardContainerTop{
+  .imgContainer {
+    display: none !important;
+  }
+
+  .reviewCardContainer {
+    height: 90% !important;
+    margin-top: 10px !important;
+  }
+  .reviewCardContainerTop {
     margin: 0 auto !important;
+  }
+}
+.reviewCardContainerTop {
+  margin: 0 auto !important;
 }

@@ -1,18 +1,16 @@
 @media screen and (max-width: 720px) {
-    .insideContainer{
-        height: 100%;
-        padding-bottom: 5rem;
-    }
-    .manageServiceContainer{
-        height: 100% !important;
-
-    }
+  .insideContainer {
+    height: 100%;
+    padding-bottom: 5rem;
   }
-  .manageServiceContainer{
-    background-image: url("../../../icons/wave-haikei.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    height: 100vh;
-
+  .manageServiceContainer {
+    height: 100% !important;
+  }
+}
+.manageServiceContainer {
+  background-image: url("../../../icons/wave-haikei.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 100vh;
 }

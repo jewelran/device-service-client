@@ -4,7 +4,7 @@ import UserReviewDetail from "./../UserReviewDetails/UserReviewDetail";
 import "./UserReview.css";
 const UserReview = () => {
   const [userReview, setUserReview] = useState([]);
-  
+
   useEffect(() => {
     fetch("https://protected-brook-16925.herokuapp.com/allReview")
       .then((res) => res.json())

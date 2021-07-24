@@ -1,12 +1,9 @@
-
-.addServiceContainer{
-    height: 100vh;
-    
+.addServiceContainer {
+  height: 100vh;
 }
 
-
 @media screen and (max-width: 720px) {
-    .addServiceContainer{
-        height: 100% !important;
-    }
+  .addServiceContainer {
+    height: 100% !important;
+  }
 }

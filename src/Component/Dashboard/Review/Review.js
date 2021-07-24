@@ -6,7 +6,7 @@ import { userContext } from "../../../App";
 import profile from "../../../images/profile-user.png";
 import star from "../../../icons/5.png";
 import Footer from "../../Footer/Footer";
-import "./review.css"
+import "./review.css";
 const Review = () => {
   const [loggedInUser] = useContext(userContext);
   const photoURL = loggedInUser.photoURL;
@@ -59,7 +59,7 @@ const Review = () => {
                     <h3>Booking information</h3>
                   </ListGroup.Item>
                 </Link>
-               
+
                 <Link to="/dashboard/bookingLIst">
                   <ListGroup.Item className="" action>
                     Booking list
@@ -70,7 +70,7 @@ const Review = () => {
                     review
                   </ListGroup.Item>
                 </Link>
-                <Link to= "/dashboard/addService">
+                <Link to="/dashboard/addService">
                   <ListGroup.Item className="" action>
                     Add New Service
                   </ListGroup.Item>
@@ -140,14 +140,16 @@ const Review = () => {
                         </div>
                         <div className="col-md-10">
                           {
-                            <h6 className ="text-light">
+                            <h6 className="text-light">
                               {user.displayName
                                 ? user.displayName
                                 : user.review?.name || user.review?.companyName}
                             </h6>
                           }
                           <img style={{ width: "65px" }} src={star} alt="" />
-                          <p className="text-light">{user.review?.description}</p>
+                          <p className="text-light">
+                            {user.review?.description}
+                          </p>
                         </div>
                       </div>
                     ))}

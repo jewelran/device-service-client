@@ -6,9 +6,9 @@ import computer from "../../../images/computer-repair.jpg";
 import mac from "../../../images/mac-pc-repair-computer-and-laptop-png.png";
 import "./Slider.css";
 const Slider = () => {
-  const topHeader =() => {
-    alert("No develop!")
-}
+  const topHeader = () => {
+    alert("No develop!");
+  };
   return (
     <div className="row">
       <Carousel fade>
@@ -31,8 +31,18 @@ const Slider = () => {
                   officia quis inventore molestiae.
                 </p>
                 <div className="mt-5">
-                  <button onClick = {()=> topHeader()} className="HomeBtn btn-warning">GET START NOW</button>
-                  <button onClick = {()=> topHeader()} className="HomeBtn btn-warning">LEARN MORE</button>
+                  <button
+                    onClick={() => topHeader()}
+                    className="HomeBtn btn-warning"
+                  >
+                    GET START NOW
+                  </button>
+                  <button
+                    onClick={() => topHeader()}
+                    className="HomeBtn btn-warning"
+                  >
+                    LEARN MORE
+                  </button>
                 </div>
               </div>
             </div>
@@ -42,7 +52,7 @@ const Slider = () => {
           <img className="d-block w-100" src={mac} alt="Third slide" />
 
           <Carousel.Caption>
-          <div className="top-header">
+            <div className="top-header">
               <div className="homeTitle">
                 <h1>REPAIR YOUR IOS</h1>
                 <p>
@@ -51,8 +61,18 @@ const Slider = () => {
                   officia quis inventore molestiae.
                 </p>
                 <div className="mt-5">
-                  <button onClick = {()=> topHeader()} className="HomeBtn btn-warning">GET START NOW</button>
-                  <button onClick = {()=> topHeader()} className="HomeBtn btn-warning">LEARN MORE</button>
+                  <button
+                    onClick={() => topHeader()}
+                    className="HomeBtn btn-warning"
+                  >
+                    GET START NOW
+                  </button>
+                  <button
+                    onClick={() => topHeader()}
+                    className="HomeBtn btn-warning"
+                  >
+                    LEARN MORE
+                  </button>
                 </div>
               </div>
             </div>

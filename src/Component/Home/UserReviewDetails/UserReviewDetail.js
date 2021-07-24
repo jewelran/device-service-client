@@ -2,14 +2,13 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import star from "../../../icons/5.png";
 import profile from "../../../images/profile-user.png";
-import "./ReviewDetailContainer.css"
+import "./ReviewDetailContainer.css";
 const UserReviewDetail = ({ user }) => {
   return (
     <div className="reviewCardContainerTop">
-     
       <Card
         className="shadow bg-body rounded reviewCardContainer"
-        style={{ width: "18rem ",height:"18rem" }}
+        style={{ width: "18rem ", height: "18rem" }}
       >
         <div className="row">
           <div className="col-md-5 m-2 imgContainer">
@@ -19,10 +18,12 @@ const UserReviewDetail = ({ user }) => {
               src={user.email ? user.photoURL : profile}
             />
           </div>
-          <div style={{float:"left"}} className="col-md-6 ">
+          <div style={{ float: "left" }} className="col-md-6 ">
             {
               <h6>
-                {user.displayName ? user.displayName : user.review?.name || user.review?.companyName}
+                {user.displayName
+                  ? user.displayName
+                  : user.review?.name || user.review?.companyName}
               </h6>
             }
             <div className="w-50">
@@ -35,10 +36,8 @@ const UserReviewDetail = ({ user }) => {
           <Card.Text>{user.review?.description}</Card.Text>
         </Card.Body>
       </Card>
-     
-      <div className="">
-     
-      </div>
+
+      <div className=""></div>
     </div>
   );
 };

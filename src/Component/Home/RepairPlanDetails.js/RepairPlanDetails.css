@@ -1,7 +1,7 @@
 @media screen and (max-width: 720px) {
-    .planDetailContainer{
-        margin: 0 auto !important;
-        width:100% !important;
-        margin-bottom: 1rem !important;
-    }
+  .planDetailContainer {
+    margin: 0 auto !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
 }

@@ -1,23 +1,23 @@
-.serviceContain{
-    background-image: url("../../../icons/wave-haikei.svg");
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: none;
-    box-shadow:"none";
+.serviceContain {
+  background-image: url("../../../icons/wave-haikei.svg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  box-shadow: "none";
 
-    height:100vh;
+  height: 100vh;
 }
 @media screen and (max-width: 720px) {
-    .serviceContain,.serviceDetailsContainer{
-        height: 100% !important;
-        margin:0 auto !important;
-    }
-    .serviceCardContainer{
-        width:100% !important;
-    }
-    .serviceDetailsContainer{
-      
-        margin-left: 20px !important;
-    }
+  .serviceContain,
+  .serviceDetailsContainer {
+    height: 100% !important;
+    margin: 0 auto !important;
+  }
+  .serviceCardContainer {
+    width: 100% !important;
+  }
+  .serviceDetailsContainer {
+    margin-left: 20px !important;
+  }
 }

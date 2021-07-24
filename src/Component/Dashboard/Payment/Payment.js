@@ -8,8 +8,8 @@ import {
   useStripe,
 } from "@stripe/react-stripe-js";
 import { userContext } from "../../../App";
-import { useForm } from 'react-hook-form';
-import like from "../../../icons/images.png"
+import { useForm } from "react-hook-form";
+import like from "../../../icons/images.png";
 const CARD_OPTIONS = {
   iconStyle: "solid",
   style: {
@@ -68,19 +68,17 @@ const Field = ({
 );
 
 const SubmitButton = ({ processing, error, children, disabled }) => (
-
   <button
     className={`SubmitButton ${error ? "SubmitButton--error" : ""}`}
     type="submit"
     disabled={processing || disabled}
   >
     {processing ? "Processing..." : children}
-    
   </button>
 );
-const processCheckOut =() => {
+const processCheckOut = () => {
   console.log("data insert in mongo db");
-}
+};
 const ErrorMessage = ({ children }) => (
   <div className="ErrorMessage" role="alert">
     <svg width="16" height="16" viewBox="0 0 17 17">
@@ -108,11 +106,11 @@ const ResetButton = ({ onClick }) => (
   </button>
 );
 
-const CheckoutForm = ({singleService}) => {
+const CheckoutForm = ({ singleService }) => {
   const [loggedInUser] = useContext(userContext);
-  const token = localStorage.getItem("token")
-  const price = parseInt(singleService[0]?.price)
-  const vat = 20
+  const token = localStorage.getItem("token");
+  const price = parseInt(singleService[0]?.price);
+  const vat = 20;
   const stripe = useStripe();
   const elements = useElements();
   const [error, setError] = useState(null);
@@ -125,8 +123,13 @@ const CheckoutForm = ({singleService}) => {
     name: "",
   });
 
- 
-console.log(cardComplete, "processing", processing, "paymentMethod",paymentMethod);
+  console.log(
+    cardComplete,
+    "processing",
+    processing,
+    "paymentMethod",
+    paymentMethod
+  );
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!stripe || !elements) {
@@ -176,7 +179,7 @@ console.log(cardComplete, "processing", processing, "paymentMethod",paymentMetho
         Payment successful
       </div>
       <div className="ResultMessage ">
-    <big className= "text-primary">Thank your for  Payment</big>
+        <big className="text-primary">Thank your for Payment</big>
       </div>
       <ResetButton onClick={reset} />
       <img src={like} alt="" />
@@ -200,7 +203,7 @@ console.log(cardComplete, "processing", processing, "paymentMethod",paymentMetho
           id="email"
           type="email"
           placeholder="janedoe@gmail.com"
-          defaultValue = {loggedInUser.email || token}
+          defaultValue={loggedInUser.email || token}
           required
           autoComplete="email"
           onChange={(e) => {
@@ -229,10 +232,13 @@ console.log(cardComplete, "processing", processing, "paymentMethod",paymentMetho
         />
       </fieldset>
       {error && <ErrorMessage>{error.message}</ErrorMessage>}
-      <SubmitButton onClick ={() =>processCheckOut()} processing={processing} error={error} disabled={!stripe}>
-        
-              pay now: ${price +vat}
-          
+      <SubmitButton
+        onClick={() => processCheckOut()}
+        processing={processing}
+        error={error}
+        disabled={!stripe}
+      >
+        pay now: ${price + vat}
       </SubmitButton>
     </form>
   );
@@ -246,40 +252,53 @@ const ELEMENTS_OPTIONS = {
   ],
 };
 
-
 const stripePromise = loadStripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
 const Payment = ({ singleService }) => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const title = singleService[0]?.title
-  const price = singleService[0]?.price
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const title = singleService[0]?.title;
+  const price = singleService[0]?.price;
   const stripePromise = loadStripe(
     "pk_test_51IyahEG17tgafnrHY08zI25TQFYtmX1KCXbysN20CmNChMimMuXR3a1V5OOMwGRSGaZ2bcKaHdjE02bS3Q4gO1E700sgzYnOwc"
   );
 
   return (
     <div className="row">
-     
-     <div className="mb-4 d-flex  align-items-center">
-      <div className="m-2 col-md-11">
-        <small>Service name</small>
-      <input style ={{ width: '100%'}} className= "border p-2 shadow" defaultValue={title}/>
-      <br />
-      <br />
-      <small>Service price</small>
-      <input style ={{ width: '100%'}}  className= "border p-2 shadow" defaultValue= {price} />
-      <br />
-      <br />
-      <small>Your comment</small>
-      <input style ={{ width: '100%'}} className= "border p-2 shadow" placeholder ="Your comment here"/>
-      </div>
-      
+      <div className="mb-4 d-flex  align-items-center">
+        <div className="m-2 col-md-11">
+          <small>Service name</small>
+          <input
+            style={{ width: "100%" }}
+            className="border p-2 shadow"
+            defaultValue={title}
+          />
+          <br />
+          <br />
+          <small>Service price</small>
+          <input
+            style={{ width: "100%" }}
+            className="border p-2 shadow"
+            defaultValue={price}
+          />
+          <br />
+          <br />
+          <small>Your comment</small>
+          <input
+            style={{ width: "100%" }}
+            className="border p-2 shadow"
+            placeholder="Your comment here"
+          />
+        </div>
       </div>
       <div className="AppWrapper">
         <Elements stripe={stripePromise} options={ELEMENTS_OPTIONS}>
-          <CheckoutForm singleService = {singleService} />
+          <CheckoutForm singleService={singleService} />
         </Elements>
       </div>
-   
     </div>
   );
 };

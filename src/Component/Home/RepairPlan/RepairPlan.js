@@ -1,6 +1,6 @@
 import React from "react";
 import RepairPlanDetails from "../RepairPlanDetails.js/RepairPlanDetails";
-import "./repairPlan.css"
+import "./repairPlan.css";
 const RepairPlan = () => {
   const allPlans = [
     {
@@ -33,22 +33,22 @@ const RepairPlan = () => {
     },
   ];
   return (
-   <div className="repairPlanContainer">
-        <div style={{ marginTop: "10rem" }} className="container-xxl pb-5 ">
-      <h1 className="text-muted text-center">Our Repair Plan</h1>
-      <p className="text-muted text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-        distinctio, vel nemo dolores laudantium recusandae quo cupiditate fugiat
-        incidunt nesciunt.
-      </p>
+    <div className="repairPlanContainer">
+      <div style={{ marginTop: "10rem" }} className="container-xxl pb-5 ">
+        <h1 className="text-muted text-center">Our Repair Plan</h1>
+        <p className="text-muted text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+          distinctio, vel nemo dolores laudantium recusandae quo cupiditate
+          fugiat incidunt nesciunt.
+        </p>
 
-      <div className="card-deck planningCardContainer">
-        {allPlans.map((plan) => (
-          <RepairPlanDetails key={plan._id} plan={plan}></RepairPlanDetails>
-        ))}
+        <div className="card-deck planningCardContainer">
+          {allPlans.map((plan) => (
+            <RepairPlanDetails key={plan._id} plan={plan}></RepairPlanDetails>
+          ))}
+        </div>
       </div>
     </div>
-   </div>
   );
 };
 

@@ -1,8 +1,7 @@
-.bookContainer{
-    background-image: url("../../../icons/wave-haikei\ \(3\).svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    height: 95vh;
-    
+.bookContainer {
+  background-image: url("../../../icons/wave-haikei\ \(3\).svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  height: 95vh;
 }

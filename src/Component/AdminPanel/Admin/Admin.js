@@ -16,7 +16,6 @@ const Admin = () => {
   } = useForm();
   const onSubmit = (data) => {
     const { name, email } = data;
-    console.log(name, email);
     fetch("https://protected-brook-16925.herokuapp.com/addAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -24,7 +23,6 @@ const Admin = () => {
     }).then((response) => {
       console.log("data insert in mongo db", response);
     });
-    console.log(data);
   };
 
   console.log(watch("example"));
@@ -59,7 +57,7 @@ const Admin = () => {
         <div className="col-md-10 row mt-5">
           <div className="col-md-3 d-flex justify-content-center ">
             <div className=" w-100">
-              <h3 className =" text-light">
+              <h3 className=" text-light">
                 <span className="fs-1">
                   <FcBusinessman />
                 </span>{" "}
