@@ -34,9 +34,8 @@ const TotalOrdersDetails = ({ order }) => {
     console.log(data);
   };
   const statusHandle = (id) => {
-    console.log(id);
+    // console.log(id);
   };
-  console.log(errors);
   return (
     <div className="m-2 shadow totalOrdersDetailsContainer">
       <Card className={classes.root}>

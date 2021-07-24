@@ -8,7 +8,6 @@ import Footer from "../../Footer/Footer";
 import "./AddService.css";
 const AddService = () => {
   const [image, setImgUrl] = useState({});
-  console.log(image);
   const {
     register,
     handleSubmit,

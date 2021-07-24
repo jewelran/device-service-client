@@ -10,7 +10,6 @@ import spinner from "../../../icons/0a3f636ab4541e6b-.gif";
 
 const TotalOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
-  console.log(allOrders);
   useEffect(() => {
     const url = "https://protected-brook-16925.herokuapp.com/totalOrder";
     fetch(url)

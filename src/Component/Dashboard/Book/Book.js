@@ -23,7 +23,6 @@ const Book = () => {
   const singleService = allServices.filter(
     (service) => service._id === uniqueService.id
   );
-  console.log(singleService);
 
   const {
     register,

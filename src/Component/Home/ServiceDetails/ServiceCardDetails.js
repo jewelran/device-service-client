@@ -4,7 +4,6 @@ import "./ServiceDetails.css";
 import { Link } from "react-router-dom";
 const ServiceCardDetails = ({ services }) => {
   const handleClick = (id) => {
-    console.log(id);
     fetch(
       "https://protected-brook-16925.herokuapp.com/single-service-item/" + id,
       {

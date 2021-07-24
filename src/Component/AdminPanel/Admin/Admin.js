@@ -25,7 +25,6 @@ const Admin = () => {
     });
   };
 
-  console.log(watch("example"));
   return (
     <div className=" ">
       <div className="">

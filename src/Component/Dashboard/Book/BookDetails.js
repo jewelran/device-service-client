@@ -5,7 +5,6 @@ import Footer from "../../Footer/Footer";
 
 const BookDetails = () => {
   const uniqueService = useParams();
-  console.log(uniqueService.id);
   const [allServices, setAllServices] = useState([]);
   useEffect(() => {
     fetch("https://protected-brook-16925.herokuapp.com/allService")
