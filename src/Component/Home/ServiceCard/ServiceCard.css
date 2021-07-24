@@ -5,8 +5,7 @@
   background-size: cover;
   border: none;
   box-shadow: "none";
-
-  height: 100vh;
+  height:100%;
 }
 @media screen and (max-width: 720px) {
   .serviceContain,
