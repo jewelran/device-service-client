@@ -27,7 +27,7 @@ const Review = () => {
     setReview(comments);
   };
   const handleSubmit = (e) => {
-    fetch("http://localhost:3030/userReview", {
+    fetch("https://protected-brook-16925.herokuapp.com/userReview", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ review, photoURL, email, displayName }),
@@ -39,7 +39,7 @@ const Review = () => {
   const [userReview, setUserReview] = useState([]);
   console.log(userReview);
   useEffect(() => {
-    fetch("http://localhost:3030/allReview")
+    fetch("https://protected-brook-16925.herokuapp.com/allReview")
       .then((res) => res.json())
       .then((data) => setUserReview(data));
   }, []);

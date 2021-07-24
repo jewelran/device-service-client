@@ -8,7 +8,7 @@ const BookDetails = () => {
   console.log(uniqueService.id);
   const [allServices, setAllServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3030/allService")
+    fetch("https://protected-brook-16925.herokuapp.com/allService")
       .then((res) => res.json())
       .then((data) => setAllServices(data));
   }, []);

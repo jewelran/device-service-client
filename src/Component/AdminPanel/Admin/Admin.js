@@ -17,7 +17,7 @@ const Admin = () => {
   const onSubmit = (data) => {
     const { name, email } = data;
     console.log(name, email);
-    fetch("http://localhost:3030/addAdmin", {
+    fetch("https://protected-brook-16925.herokuapp.com/addAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ name: name, email: email }),

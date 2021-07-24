@@ -12,7 +12,7 @@ const TotalOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
   console.log(allOrders);
   useEffect(() => {
-    const url = "http://localhost:3030/totalOrder";
+    const url = "https://protected-brook-16925.herokuapp.com/totalOrder";
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAllOrders(data));

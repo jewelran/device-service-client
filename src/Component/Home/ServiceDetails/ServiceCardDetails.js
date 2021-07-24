@@ -6,7 +6,7 @@ import { Link,} from 'react-router-dom';
 const ServiceCardDetails = ({services}) => {
  const handleClick = (id) => {
   console.log(id);
-  fetch("http://localhost:3030/single-service-item/"+id, {
+  fetch("https://protected-brook-16925.herokuapp.com/single-service-item/"+id, {
     method:"POST",
     headers:{"content-type":"application/json"},
     body: JSON.stringify({id})

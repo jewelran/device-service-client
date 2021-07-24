@@ -26,7 +26,7 @@ const ManageServiceDetails = ({service}) => {
     const classes = useStyles();
 
     const deleteHandler = (id) => {
-        fetch(`http://localhost:3030/delete/${id}`, {
+        fetch(`https://protected-brook-16925.herokuapp.com/delete/${id}`, {
           method: "DELETE",
         })
         .then(res => res.json())

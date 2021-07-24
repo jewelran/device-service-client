@@ -16,7 +16,7 @@ const Book = () => {
   const [allServices, setAllServices] = useState([]);
   // console.log(allServices);
   useEffect(() => {
-    fetch("http://localhost:3030/allService")
+    fetch("https://protected-brook-16925.herokuapp.com/allService")
       .then((res) => res.json())
       .then((data) => setAllServices(data));
   }, []);
@@ -43,7 +43,7 @@ const Book = () => {
     console.log(id, description);
     console.log(pending, done, ongoing);
     console.log("data", data, "status", status, "singleService", singleService);
-    fetch("http://localhost:3030/userOrderCollection", {
+    fetch("https://protected-brook-16925.herokuapp.com/userOrderCollection", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({

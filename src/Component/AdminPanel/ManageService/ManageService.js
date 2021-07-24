@@ -11,7 +11,7 @@ import spinner from"../../../icons/0a3f636ab4541e6b-.gif"
  const ManageService = () => {
   const [allService, setAllServices] = useState([])
     useEffect(() => {
-      const url = "http://localhost:3030/allService"
+      const url = "https://protected-brook-16925.herokuapp.com/allService"
       fetch(url)
       .then(res => res.json())
       .then(data => setAllServices(data))

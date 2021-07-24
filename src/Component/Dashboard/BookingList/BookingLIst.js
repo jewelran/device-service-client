@@ -12,7 +12,7 @@ const BookingLIst = () => {
   const [uniqueUserItem, setUniqueUserItem] = useState([])
   
   useEffect(() => {
-    fetch(`http://localhost:3030/singleUserItem`,{
+    fetch(`https://protected-brook-16925.herokuapp.com/singleUserItem`,{
       method: "POST",
       headers: {    "Content-type": "application/json"  },
       body: JSON.stringify({email:loggedInUser.email|| token})

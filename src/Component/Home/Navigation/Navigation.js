@@ -9,7 +9,7 @@ const Navigation = () => {
   const token = localStorage.getItem("token");
   console.log(admins, token);
   useEffect(() => {
-    fetch(`http://localhost:3030/allAdmin`,{
+    fetch(`https://protected-brook-16925.herokuapp.com/allAdmin`,{
       method: "POST",
       headers: { "content-type": "application/json"},
       body: JSON.stringify({email:loggedInUser.email|| token})
