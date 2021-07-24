@@ -3,6 +3,9 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import "./RepairPlanDetails.css";
 const RepairPlanDetails = ({ plan }) => {
+  const handleCard = () => {
+    alert("Sorry No Develop!")
+  }
   return (
     <div className=" topPlanDetailContainer">
       <Card
@@ -21,7 +24,7 @@ const RepairPlanDetails = ({ plan }) => {
           </Card.Subtitle>
           <Card.Text>{plan.description}</Card.Text>
         </Card.Body>
-        <Button variant="warning">Click Here</Button>
+        <Button onClick = {()=>handleCard()} variant="warning">Click Here</Button>
       </Card>
     </div>
   );

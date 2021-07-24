@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Navigation from "./../../Home/Navigation/Navigation";
 import "./TotalOrders.css";
 import Footer from "../../Footer/Footer";
-import spinner from"../../../icons/0a3f636ab4541e6b-.gif"
+import spinner from "../../../icons/0a3f636ab4541e6b-.gif";
 
 const TotalOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
@@ -45,18 +45,26 @@ const TotalOrders = () => {
             </ListGroup>
           </div>
         </div>
-        <div className="col-md-9 card-deck p-0 h-25  ">
-          {
-            allOrders.length === 0 ? <img style ={{ width:"5rem",marginLeft:"45%",marginTop:"8rem"}} src={spinner} alt="" /> :
-         <span>   {allOrders.map((order) => (
-          <TotalOrdersDetails
-            key={order._id}
-            order={order}
-          ></TotalOrdersDetails>
-        ))}</span>
-          
-          }
-         
+        <div className="col-md-9 ">
+          <div className=" mt-5">
+            {allOrders.length === 0 ? (
+              <img
+                style={{ width: "5rem", marginLeft: "45%", marginTop: "8rem" }}
+                src={spinner}
+                alt=""
+              />
+            ) : (
+              <span className="card-deck">
+                {" "}
+                {allOrders.map((order) => (
+                  <TotalOrdersDetails
+                    key={order._id}
+                    order={order}
+                  ></TotalOrdersDetails>
+                ))}
+              </span>
+            )}
+          </div>
         </div>
       </div>
       <div className="">

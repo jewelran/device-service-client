@@ -5,21 +5,20 @@ import { Link} from "react-router-dom";
 import Footer from "../../Footer/Footer";
 import { userContext } from "../../../App";
 import "./BookingLIst.css"
+import BookingLIstDetails from "../BookingListDetails/BookingLIstDetails";
 const BookingLIst = () => {
   const token = localStorage.getItem("token")
   const [loggedInUser, setLoggedInUser] = useContext(userContext);
-  // const [email, setEmail] = useState({})
-  // console.log(email);
-
+  const [uniqueUserItem, setUniqueUserItem] = useState([])
+  
   useEffect(() => {
-    fetch(`http://localhost:3030/dashboard?email=${loggedInUser.email || token}`,{
+    fetch(`http://localhost:3030/singleUserItem`,{
       method: "POST",
       headers: {    "Content-type": "application/json"  },
-      body: JSON.stringify(token)
+      body: JSON.stringify({email:loggedInUser.email|| token})
     })
-  .then(response  => {
-    // alert("response")
-  })
+  .then((res) => res.json())
+  .then((data => setUniqueUserItem(data)))
   },[])
   return (
     <div className="">
@@ -36,7 +35,7 @@ const BookingLIst = () => {
                   <h3>Booking information</h3>
                 </ListGroup.Item>
               </Link>
-              <Link to={"/dashboard/bookingLIst"}>
+           <Link to={"/dashboard/bookingLIst"}>
                 <ListGroup.Item className="active" action>
                   Booking list
                 </ListGroup.Item>
@@ -51,7 +50,13 @@ const BookingLIst = () => {
           </div>
         </div>
         <div className="container-sm col-md-9">
-          <h1>this is Booking list </h1>
+          <h1 className="text-light">this is Booking list </h1>
+          <div className="card-deck">
+            { uniqueUserItem.length > 0 ?uniqueUserItem.map(item => <BookingLIstDetails key ={item._id} item ={item}></BookingLIstDetails>):
+            <h1 className= "text-danger">Not found your Order</h1>
+              
+            }
+          </div>
         </div>
       </div>
     </div>

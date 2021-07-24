@@ -1,0 +1,6 @@
+.MuiPaper-root{
+    background-image: url("../../../icons/circle-scatter-haikei1.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

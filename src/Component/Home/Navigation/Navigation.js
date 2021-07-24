@@ -6,13 +6,13 @@ import { useContext } from "react";
 const Navigation = () => {
   const [loggedInUser, setLoggedInUser] = useContext(userContext);
   const [admins, setAdmin] = useState(false);
-  const email = localStorage.getItem("token");
-  console.log(admins, email);
+  const token = localStorage.getItem("token");
+  console.log(admins, token);
   useEffect(() => {
     fetch(`http://localhost:3030/allAdmin`,{
       method: "POST",
       headers: { "content-type": "application/json"},
-      body: JSON.stringify({mail:email})
+      body: JSON.stringify({email:loggedInUser.email|| token})
     })
       .then((res) => res.json())
       .then((data) => setAdmin(data));

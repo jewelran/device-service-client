@@ -6,6 +6,9 @@ import computer from "../../../images/computer-repair.jpg";
 import mac from "../../../images/mac-pc-repair-computer-and-laptop-png.png";
 import "./Slider.css";
 const Slider = () => {
+  const topHeader =() => {
+    alert("No develop!")
+}
   return (
     <div className="row">
       <Carousel fade>
@@ -28,8 +31,8 @@ const Slider = () => {
                   officia quis inventore molestiae.
                 </p>
                 <div className="mt-5">
-                  <button className="HomeBtn btn-warning">GET START NOW</button>
-                  <button className="HomeBtn btn-warning">LEARN MORE</button>
+                  <button onClick = {()=> topHeader()} className="HomeBtn btn-warning">GET START NOW</button>
+                  <button onClick = {()=> topHeader()} className="HomeBtn btn-warning">LEARN MORE</button>
                 </div>
               </div>
             </div>
@@ -48,8 +51,8 @@ const Slider = () => {
                   officia quis inventore molestiae.
                 </p>
                 <div className="mt-5">
-                  <button className="HomeBtn btn-warning">GET START NOW</button>
-                  <button className="HomeBtn btn-warning">LEARN MORE</button>
+                  <button onClick = {()=> topHeader()} className="HomeBtn btn-warning">GET START NOW</button>
+                  <button onClick = {()=> topHeader()} className="HomeBtn btn-warning">LEARN MORE</button>
                 </div>
               </div>
             </div>

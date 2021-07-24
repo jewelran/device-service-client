@@ -5,6 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { useForm } from 'react-hook-form';
+import "./TotalOrderContainer.css"
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
@@ -25,10 +26,18 @@ const useStyles = makeStyles({
 const TotalOrdersDetails = ({order}) => {
     const classes = useStyles();
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+      console.log(data)
+     
+
+    };
+    const statusHandle = (id) => {
+      console.log(id);
+      
+    }
     console.log(errors);
     return (
-        <div className="m-2 shadow">
+        <div className="m-2 shadow totalOrdersDetailsContainer">
             <Card className={classes.root}>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
@@ -48,12 +57,12 @@ const TotalOrdersDetails = ({order}) => {
       </CardContent>
       <CardActions>
       <form onSubmit={handleSubmit(onSubmit)}>
-      <select {...register("status", { required: true })}>
+      <select className= "p-2 rounded bg-light text-dark " {...register("status", { required: true })}>
         <option value="DONE">DONE</option>
         <option value="ONGOING">ONGOING</option>
         <option value="PENDING">PENDING</option>
       </select>
-      <input className = "btn-secondary border rounded " type="submit" value = "done" />
+      <input onClick = {() => statusHandle(order._id)} className = "btn-secondary btn pt-0 pl-3 pr-3 border rounded " type="submit" value = "done" />
     </form>
       </CardActions>
     </Card> 

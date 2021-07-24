@@ -4,7 +4,7 @@ import UserReviewDetail from "./../UserReviewDetails/UserReviewDetail";
 import "./UserReview.css";
 const UserReview = () => {
   const [userReview, setUserReview] = useState([]);
-  console.log(userReview);
+  
   useEffect(() => {
     fetch("http://localhost:3030/allReview")
       .then((res) => res.json())

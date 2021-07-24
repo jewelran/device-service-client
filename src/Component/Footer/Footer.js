@@ -21,8 +21,8 @@ const Footer = () => {
   };
 
   return (
-  <div className="">
-        <div className="footer-container text-secondary d-flex  align-items-center justify-content-center p-3">
+  <div className=" ">
+        <div className="footer-container text-secondary d-flex   align-items-center justify-content-center p-3">
       <div className="row d-flex  container-fluid">
         <div className="col-md-3">
           <div className="">
@@ -188,8 +188,8 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    <div className="row bg-dark text-white ">
-        <div className="container text-center p-3">
+    <div className="bg-dark text-white">
+        <div className="w-100 text-center p-3">
            <p>CopyRight &#169; 2021. All right reserved by <span className ="text-warning">Jewel rana</span> </p>
         </div>
     </div>
